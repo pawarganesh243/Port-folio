@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cinzel', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.04em;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 3D / Sophisticated Dark Rockstar & Vice City Stacked Text Effect */
+.text-shadow-gta {
+  text-shadow: 
+    2px 2px 0px rgba(255, 0, 110, 0.4),
+    4px 4px 0px rgba(110, 0, 48, 0.6),
+    6px 6px 0px rgba(40, 0, 20, 0.8),
+    0 0 25px rgba(255, 0, 110, 0.35);
+}
+
+.text-stroke-pink {
+  -webkit-text-stroke: 2px #FF006E;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 15px rgba(255, 0, 110, 0.6), 0 0 30px rgba(255, 0, 110, 0.3);
+}
+
+.text-shadow-cyan {
+  text-shadow: 0 0 15px rgba(0, 245, 212, 0.5), 0 0 30px rgba(0, 245, 212, 0.2);
+}
+
+.text-shadow-gold {
+  text-shadow: 0 0 15px rgba(226, 177, 122, 0.4);
+}
+
+/* Horizontal scanlines pattern for striated text & boxes */
+.bg-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.02) 2px,
+    rgba(255, 255, 255, 0.02) 4px
+  );
+}
+
+.bg-scanlines-pink {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 0, 110, 0.06) 3px,
+    rgba(255, 0, 110, 0.06) 6px
+  );
+}
+
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.bg-cyber-radial {
+  background: radial-gradient(circle at 60% 40%, #3d142b 0%, #050505 70%);
+}
+
+/* Custom GTA style scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f26;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF006E;
+}
+
+/* Striated text cutout effect */
+.text-striated {
+  background: repeating-linear-gradient(
+    180deg,
+    #FF006E 0%,
+    #FF006E 60%,
+    #990042 60%,
+    #990042 100%
+  );
+  background-size: 100% 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.03); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-spin 8s linear infinite;
+}
+
+@layer base {
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/* --- Cinematic GTA 6 Style Reveal Animations --- */
+.reveal-on-scroll {
+  /* The section itself just serves as the trigger now */
+}
+
+/* Base states for children */
+.reveal-child,
+.reveal-child-scale,
+.reveal-child-left,
+.reveal-child-right {
+  opacity: 0;
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1); /* Slow, cinematic easing */
+}
+
+.reveal-child {
+  transform: translateY(60px);
+}
+.reveal-child-scale {
+  transform: scale(0.92) translateY(30px);
+}
+.reveal-child-left {
+  transform: translateX(-60px);
+}
+.reveal-child-right {
+  transform: translateX(60px);
+}
+
+/* Active states when section intersects */
+.is-visible .reveal-child,
+.is-visible .reveal-child-scale,
+.is-visible .reveal-child-left,
+.is-visible .reveal-child-right {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Cinematic Staggers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
