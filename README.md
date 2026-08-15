@@ -1,5 +1,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/STATUS-ONLINE-00F5D4?style=for-the-badge&logo=codeforces&logoColor=black" alt="Status" />
+  <a href="https://aistudio.google.com/"><img src="https://img.shields.io/badge/BUILT_WITH-GOOGLE_AI_STUDIO-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google AI Studio" /></a>
   <img src="https://img.shields.io/badge/FRAMEWORK-REACT_18-FF006E?style=for-the-badge&logo=react&logoColor=white" alt="React" />
   <img src="https://img.shields.io/badge/STYLING-TAILWIND-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
 
@@ -13,6 +14,9 @@
 </div>
 
 ## 🌐 Overview
+
+> 🤖 **This entire portfolio was architected, designed, and generated using [Google AI Studio](https://aistudio.google.com/) and Gemini models.**
+
 A deeply interactive, performance-optimized, cyberpunk-themed developer portfolio. Built for speed, brutalist aesthetic, and maximum conversion.
 
 This portfolio skips the generic, minimalist web designs and instead opts for a "GTA 6 / Vice City" inspired dark-mode aesthetic featuring deep neon contrasts, parallax scrolling, and an embedded terminal/CLI.
